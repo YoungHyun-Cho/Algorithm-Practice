@@ -7,8 +7,8 @@ public class BubbleSort implements SortAlgorithm {
     @Override
     public void sort(int[] arr) {
         System.out.println(Arrays.toString(arr));
-//        startFromFront(arr);
-        startFromBack(arr);
+        startFromFront(arr);
+//        startFromBack(arr);
     }
 
     // 앞에서부터 버블정렬

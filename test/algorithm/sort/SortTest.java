@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SortTest {
 
     private static int[] arr;
-    private static SortAlgorithm sortAlgorithm = new BubbleSort();
-    private static int testArraySize = 10000;
+    private static SortAlgorithm sortAlgorithm = new SelectionSort();
+    private static int testArraySize = 20;
 
     @BeforeEach
     public void initiateArray() {
