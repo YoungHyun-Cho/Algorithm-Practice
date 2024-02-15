@@ -13,7 +13,7 @@ public class SelectionSort implements SortAlgorithm {
     @Override
     public void sort(int[] arr) {
 
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
 
         for (int i = 0; i < arr.length; i++) {            // i : 최소값이 곧 들어올 자리 지정
             int minIndex = i;                             // minIndex : 최소값이 존재하는 자리
@@ -21,7 +21,7 @@ public class SelectionSort implements SortAlgorithm {
                 if (arr[j] < arr[minIndex]) minIndex = j; // 최소값을 찾아 minIndex에 위치 저장
             }
             swap(arr, i, minIndex);                       // 처음에 지정한 자리(i)와 최소값이 존재하는 위치의 값을 서로 바꿈
-            System.out.println(Arrays.toString(arr));
+//            System.out.println(Arrays.toString(arr));
         }
     }
 

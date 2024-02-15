@@ -11,7 +11,7 @@ public class SortTest {
 
     private static int[] arr;
     private static SortAlgorithm sortAlgorithm = new QuickSort();
-    private static int testArraySize = 20;
+    private static int testArraySize = 10000;
 
     @BeforeEach
     public void initiateArray() {

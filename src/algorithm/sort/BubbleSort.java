@@ -18,7 +18,7 @@ public class BubbleSort implements SortAlgorithm {
 
     @Override
     public void sort(int[] arr) {
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
         startFromFront(arr);
 //        startFromBack(arr);
     }
@@ -30,7 +30,7 @@ public class BubbleSort implements SortAlgorithm {
             for (int j = 1; j < arr.length - i; j++) {            // 맨 앞에서부터 length - 1까지 두 요소를 비교하기 위해 순회
                 if (arr[j - 1] > arr[j]) swap(arr, j - 1, j); // j와 j 직전 요소를 비교하고, 직전 요소가 더 크다면 서로 자리를 바꿈.
             }
-            System.out.println(Arrays.toString(arr));
+//            System.out.println(Arrays.toString(arr));
         }
     }
 
@@ -41,7 +41,7 @@ public class BubbleSort implements SortAlgorithm {
             for (int j = arr.length - 2; j >= i; j--) {            // 맨 뒤에서부터 i까지 두 요소를 비교하기 위해 순회
                 if (arr[j] > arr[j + 1]) swap(arr, j, j + 1); // j와 j 직후 요소를 비교하고, 직후 요소가 더 크다면 서로 자리를 바꿈.
             }
-            System.out.println(Arrays.toString(arr));
+//            System.out.println(Arrays.toString(arr));
         }
     }
 

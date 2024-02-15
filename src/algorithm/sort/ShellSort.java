@@ -54,7 +54,7 @@ public class ShellSort implements SortAlgorithm {
     @Override
     public void sort(int[] arr) {
 
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
 
         /*
         * gap의 값을 구해줌.
@@ -74,7 +74,7 @@ public class ShellSort implements SortAlgorithm {
                     arr[j + gap] = arr[j];                             // temp의 인덱스에서부터 0까지 gap만큼 j를 감소시키며
                 }                                                      // arr[j]를 삽입할 적절한 위치를 찾고 삽입
                 arr[j + gap] = temp;                                   // 삽입 정렬에서의 코드와 동일
-                System.out.println(Arrays.toString(arr));
+//                System.out.println(Arrays.toString(arr));
             }
             gap /= 3;                                                  // gap 값을 3으로 나눔.
         }

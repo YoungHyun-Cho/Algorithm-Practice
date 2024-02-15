@@ -39,7 +39,7 @@ public class InsertionSort implements SortAlgorithm {
     @Override
     public void sort(int[] arr) {
 
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
 
         for (int i = 1; i < arr.length; i++) {             // arr[i] : 선택값
             int j;                                         // j : 선택값이 들어갈 자리의 인덱스
@@ -49,7 +49,7 @@ public class InsertionSort implements SortAlgorithm {
             }
             arr[j] = temp;                                 // 반복문 순회가 끝난 시점에, arr[j - 1] < temp < arr[j + 1] 성립
 
-            System.out.println(Arrays.toString(arr));
+//            System.out.println(Arrays.toString(arr));
         }
     }
 }
