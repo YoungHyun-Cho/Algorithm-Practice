@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SortTest {
 
     private static int[] arr;
-    private static SortAlgorithm sortAlgorithm = new ShellSort();
+    private static SortAlgorithm sortAlgorithm = new QuickSort();
     private static int testArraySize = 20;
 
     @BeforeEach
