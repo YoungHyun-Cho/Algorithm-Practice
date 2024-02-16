@@ -124,4 +124,36 @@ public class SortTimeTest {
 
         System.out.println("Quick Sort : " + ((end - start) / 1_000_000) + "ms");
     }
+
+    @Test
+    public void mergeSortTest() {
+
+        MergeSort mergeSort = new MergeSort();
+
+        long start = System.nanoTime();
+        mergeSort.sort(arr);
+        long end = System.nanoTime();
+
+        for (int i = 0; i < testArraySize; i++) {
+            assertEquals(arr[i], i);
+        }
+
+        System.out.println("Merge Sort : " + ((end - start) / 1_000_000) + "ms");
+    }
+
+    @Test
+    public void heapSortTest() {
+
+        HeapSort heapSort = new HeapSort();
+
+        long start = System.nanoTime();
+        heapSort.sort(arr);
+        long end = System.nanoTime();
+
+        for (int i = 0; i < testArraySize; i++) {
+            assertEquals(arr[i], i);
+        }
+
+        System.out.println("Heap Sort : " + ((end - start) / 1_000_000) + "ms");
+    }
 }
