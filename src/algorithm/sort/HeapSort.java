@@ -28,7 +28,7 @@ package algorithm.sort;
 
 public class HeapSort implements SortAlgorithm {
 
-    @Override
+        @Override
     public void sort(int[] arr) {                   // arr : [ 10, 9, 5, 8, 3, 2, 4, 6, 7, 1 ]
         final int LAST_INDEX = arr.length - 1;
 
