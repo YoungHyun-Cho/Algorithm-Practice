@@ -11,6 +11,25 @@ import java.util.Arrays;
 public class SelectionSort implements SortAlgorithm {
 
     @Override
+    public void test(int[] arr) {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
     public void sort(int[] arr) {
 
 //        System.out.println(Arrays.toString(arr));

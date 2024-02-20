@@ -11,7 +11,7 @@ public class SortTest {
 
     private static int[] arr;
     private static SortAlgorithm sortAlgorithm = new HeapSort();
-    private static int testArraySize = 10000;
+    private static int testArraySize = 50000;
 
     @BeforeEach
     public void initiateArray() {
@@ -40,7 +40,7 @@ public class SortTest {
     public void sortTest() {
 
         long start = System.nanoTime();
-        sortAlgorithm.sort(arr);
+        sortAlgorithm.test(arr);
         long end = System.nanoTime();
 
         for (int i = 0; i < testArraySize; i++) {

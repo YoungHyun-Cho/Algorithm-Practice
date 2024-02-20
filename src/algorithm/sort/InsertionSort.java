@@ -37,6 +37,27 @@ import java.util.Arrays;
 public class InsertionSort implements SortAlgorithm {
 
     @Override
+    public void test(int[] arr) {
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
     public void sort(int[] arr) {
 
 //        System.out.println(Arrays.toString(arr));

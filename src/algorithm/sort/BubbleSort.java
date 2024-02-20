@@ -17,6 +17,25 @@ import java.util.Arrays;
 public class BubbleSort implements SortAlgorithm {
 
     @Override
+    public void test(int[] arr) {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
     public void sort(int[] arr) {
 //        System.out.println(Arrays.toString(arr));
         startFromFront(arr);

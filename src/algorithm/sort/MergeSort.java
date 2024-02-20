@@ -24,39 +24,58 @@ package algorithm.sort;
 
 public class MergeSort implements SortAlgorithm {
 
-    private static int[] buffer;
+    @Override
+    public void test(int[] arr) {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public void sort(int[] arr) {
-        buffer = new int[arr.length];
-        mergeSort(arr, 0, arr.length - 1);
-        buffer = null;
+//        buffer = new int[arr.length];
+//        mergeSort(arr, 0, arr.length - 1);
+//        buffer = null;
     }
 
-    private static void mergeSort(int[] arr, int left, int right) {
-        if (left < right) {                  // 재귀 종료 조건
-            int ap1 = left;                  // arr 포인터 1 -> 좌끝으로 초기화
-            int ap2 = left;                  // arr 포인터 2 -> 좌끝으로 초기화
-            int bp1 = 0;                     // 버퍼 포인터 1 -> 0으로 초기화
-            int bp2 = 0;                     // 버퍼 포인터 2 -> 0으로 초기화
-            int center = (left + right) / 2; // 그룹화를 위한 중간 지점
-
-            mergeSort(arr, left, center);          // 좌끝~센터 그룹에 대해 재귀적으로 분할
-            mergeSort(arr, center + 1, right); // 센터+1~우끝 그룹에 대해 재귀적으로 분할
-
-            while (ap1 <= center) {                // 1️⃣ 좌끝~센터까지의 요소를 버퍼로 복사
-                buffer[bp1++] = arr[ap1++];
-            }
-
-            while (ap1 <= right && bp2 < bp1) {    // 2️⃣ arr[센터+1~우끝]의 요소와 버퍼의 요소들 중, 작은 요소를 arr의 좌끝에 복사
-                arr[ap2++] = buffer[bp2] <= arr[ap1] ? buffer[bp2++]: arr[ap1++]; // 복사한 대상의 인덱스를 1 증가 (포인터 수정)
-            }
-
-            while (bp2 < bp1) {                    // 3️⃣ 버퍼에 남은 요소들을 arr에 이어서 복사
-                arr[ap2++] = buffer[bp2++];
-            }
-        }
-    }
+//    private static void mergeSort(int[] arr, int left, int right) {
+//        if (left < right) {                  // 재귀 종료 조건
+//            int ap1 = left;                  // arr 포인터 1 -> 좌끝으로 초기화
+//            int ap2 = left;                  // arr 포인터 2 -> 좌끝으로 초기화
+//            int bp1 = 0;                     // 버퍼 포인터 1 -> 0으로 초기화
+//            int bp2 = 0;                     // 버퍼 포인터 2 -> 0으로 초기화
+//            int center = (left + right) / 2; // 그룹화를 위한 중간 지점
+//
+//            mergeSort(arr, left, center);          // 좌끝~센터 그룹에 대해 재귀적으로 분할
+//            mergeSort(arr, center + 1, right); // 센터+1~우끝 그룹에 대해 재귀적으로 분할
+//
+//            while (ap1 <= center) {                // 1️⃣ 좌끝~센터까지의 요소를 버퍼로 복사
+//                buffer[bp1++] = arr[ap1++];
+//            }
+//
+//            while (ap1 <= right && bp2 < bp1) {    // 2️⃣ arr[센터+1~우끝]의 요소와 버퍼의 요소들 중, 작은 요소를 arr의 좌끝에 복사
+//                arr[ap2++] = buffer[bp2] <= arr[ap1] ? buffer[bp2++]: arr[ap1++]; // 복사한 대상의 인덱스를 1 증가 (포인터 수정)
+//            }
+//
+//            while (bp2 < bp1) {                    // 3️⃣ 버퍼에 남은 요소들을 arr에 이어서 복사
+//                arr[ap2++] = buffer[bp2++];
+//            }
+//        }
+//    }
 }
 
 /*

@@ -17,6 +17,32 @@ package algorithm.sort;
 public class QuickSort implements SortAlgorithm {
 
     @Override
+    public void test(int[] arr) {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
     public void sort(int[] arr) {
         quickSort(arr, 0, arr.length - 1);
     }
@@ -26,11 +52,11 @@ public class QuickSort implements SortAlgorithm {
         int pr = right;                                            // 오른쪽 스캔 포인터
         int pivot = arr[(pl + pr) / 2];                            // 피벗 : 중간에 위치한 값으로 지정
 
-        do {
+        while (pl <= pr) {                                         // 피벗이 교차하지 않는 동안에만 반복 -> 교차 시 멈춤
             while (arr[pl] < pivot) pl++;                          // 좌측에서부터 피벗까지 스캔하며, 피벗보다 큰 값이 나오면 스캔 멈춤.
             while (arr[pr] > pivot) pr--;                          // 우측에서부터 피벗까지 스캔하며, 피벗보다 작은 값이 나오면 스캔 멈춤.
             if (pl <= pr) swap(arr, pl++, pr--);                   // 두 값을 교환함. 이 때, 피벗은 서로 교차하지 않은 상태여야 함.
-        } while (pl <= pr);                                        // 이를 피벗이 교차하지 않는 동안에만 반복 -> 교차 시 멈춤
+        }
 
         if (left < pr) quickSort(arr, left, pr);                   // 피벗 기준 좌측 그룹에 대해 동일한 작업 수행
         if (pl < right) quickSort(arr, pl, right);                 // 피벗 기준 우측 그룹에 대해 동일한 작업 수행

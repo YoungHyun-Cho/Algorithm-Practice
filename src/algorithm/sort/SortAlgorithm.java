@@ -1,5 +1,6 @@
 package algorithm.sort;
 
 public interface SortAlgorithm {
-    public void sort(int[] arr);
+    void sort(int[] arr);
+    void test(int[] arr);
 }

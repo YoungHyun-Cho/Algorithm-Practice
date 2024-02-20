@@ -15,7 +15,7 @@ public class SearchTest {
     private static int[] arr;
 
     private static SortAlgorithm sortAlgorithm = new QuickSort();
-    private static SearchAlgorithm searchAlgorithm = new BinarySearch();
+    private static SearchAlgorithm searchAlgorithm = new LinearSearch();
     private static final int testArraySize = 10000;
     private static final int ANSWER = 7777;
 

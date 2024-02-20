@@ -28,7 +28,58 @@ package algorithm.sort;
 
 public class HeapSort implements SortAlgorithm {
 
-        @Override
+    @Override
+    public void test(int[] arr) {
+        final int LAST_INDEX = arr.length - 1;
+
+        for (int i = LAST_INDEX / 2; i >= 0; i--) {
+            composeHeap1(arr, i, LAST_INDEX);
+        }
+
+        for (int lastIdx = LAST_INDEX; lastIdx > 0; lastIdx--) {
+            swap(arr, 0, lastIdx);
+            composeHeap1(arr, 0, lastIdx - 1);
+        }
+
+    }
+
+    private static void composeHeap1(int[] arr, int left, int right) {
+        int temp = arr[left];
+        int parent;
+        int child;
+
+        for (parent = left; parent < (right + 1) / 2; parent = child) {
+            int cl = parent * 2 + 1;
+            int cr = cl + 1;
+
+            child = cr <= right && arr[cl] < arr[cr] ? cr : cl;
+
+            if (temp > arr[child]) break;
+            else arr[parent] = arr[child];
+        }
+        arr[parent] = temp;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Override
     public void sort(int[] arr) {                   // arr : [ 10, 9, 5, 8, 3, 2, 4, 6, 7, 1 ]
         final int LAST_INDEX = arr.length - 1;
 
